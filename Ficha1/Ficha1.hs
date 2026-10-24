@@ -87,14 +87,6 @@ cvrtMinParaH m = (m `div` 60, m `mod` 60)
 
 --3.e)
 
--- difHoras :: Hora -> Hora -> Int
--- difHoras (h,m) (h2,m2)
---    |m1 >= m2 = m1 - m2
---    |otherwise = m2 - m1
---    where
---        m1 = cvrtHoraParaM (h,m)
---        m2 = cvrtHoraParaM (h2,m2) -- FALAR COM O SOR NA TP!!!!!!!!!
-
 difHoras :: Hora -> Hora -> Int
 difHoras (h1,m1) (h2,m2)
     |m1 >= m2 = m1 - m2
@@ -108,11 +100,7 @@ difHoras (h1,m1) (h2,m2)
 adicionarMin :: Hora -> Int -> Hora
 adicionarMin (h, m) m1 = cvrtMinParaH (cvrtHoraParaM (h,m) + m1)
 
---4)
-
-data Hora = H Int Int deriving (Show,Eq)
-
---4) Basicamente e repitir todos os exercicios mas substituir o sinonimo por H x y!!
+--4) Basicamente e repitir todos os exercicios mas substituir o sinonimo por H x y!
 
 --5.a)
 
